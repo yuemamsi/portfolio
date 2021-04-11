@@ -1,0 +1,431 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.skip a{
+  background-color: #ffffff;
+  left: 0;
+  padding: 7px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+  top: -50px;
+  left: 10px;
+}
+
+.skip a:focus{
+  top: 10px;
+  color: #141414;
+  background-color: #ffffff;
+}
+
+*:focus{
+  border: dashed 1px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+header{
+  background-color: #141414;
+  margin-bottom: 20px;
+}
+
+nav{
+  background-color: #141414;
+  padding: 20px; 
+  margin-top: 30px;
+  border-top-style: solid;
+  border-top-width: 10px;
+  border-bottom-style: solid;
+  border-bottom-width: 10px;
+  border-image: linear-gradient(to right, #141414, #ffc600, #ffaa39, #ffc600, #141414) 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+nav a, nav li{
+  color: #ffffff;
+  font-family: "Kanit", sans-serif;
+  font-weight: initial;
+  padding: 10px;
+}
+
+nav a:hover{
+  border-radius: 5px;
+  font-weight: bold;
+  color: #ffaa39;
+}
+
+.about #navigation #about, .education #navigation #education,
+.professional #navigation #professional, .certificate #navigation #certificate{
+  font-style: italic;
+  font-weight: bold;
+  color: #ffaa39;
+  text-shadow: 0px 0px 15px #ffc600;
+}
+
+#logo, .logo{
+  width: 230px;
+  animation: logo_grow 2s 1;
+  -webkit-animation: logo_grow 2s 1;
+}
+
+@-webkit-keyframes logo_grow{
+  from {
+    width: 25px;
+  }
+  to {
+    width: 230px;
+  }
+}
+
+@keyframes logo_grow{
+  from {
+    width: 25px;
+  }
+  to {
+    width: 230px;
+  }
+} 
+
+nav{
+  animation: nav_show 3s 1;
+  -webkit-animation: nav_show 3s 1;
+}
+
+@-webkit-keyframes nav_show{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes nav_show{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} 
+
+body{
+  background-color: #d1d4d3;  
+}
+
+h1, h2, h3{
+  font-family: "Kanit", sans-serif;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+h1{
+  color: #141414;
+  font-size: 50px;
+  padding: 50px;
+  text-align: center;
+  background-color: #d1d4d3;
+}
+
+h2{
+  color: #ffffff;
+  font-size: 32px;
+  background-color: #141414;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  padding: 0px 15px 0px 15px;
+}
+
+h3{
+  color: #ffaa39;
+  font-size: 20px;
+  background-color: #141414;
+  padding: 0px 15px 0px 15px;
+  font-style: italic;
+  border-bottom: 5px #141414 solid;
+}
+
+p,li{
+  color: #141414;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  padding: 7.5px 15px 7.5px 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+footer{
+  background-color: #141414;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+  border-top-style: solid;
+  border-top-width: 10px;
+  border-image: linear-gradient(to right, #141414, #ffc600, #ffaa39, #ffc600, #141414) 1;
+}
+
+footer a, footer p{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+ul{
+  list-style: disc inside;
+  }
+
+.container{
+  display: grid;
+  grid-template-columns: 5% 22.5% 22.5% 22.5% 22.5% 5%;
+}
+
+.container div{
+  border: 5px solid #141414;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.container p{
+  grid-column: 2/span 4;
+  margin-top: 15px;
+}
+
+/*About Page*/
+#yuema{
+  width: 150px;
+  grid-column: 2/span 4;
+  margin: auto;
+}
+
+/*Education Page*/
+#umlogo, #umlogo img, #msulogo, #msulogo img{
+  width: 130px;
+  grid-column: 3/span 2;
+  margin: auto;
+  margin-bottom: -20px;
+  border-radius: 20px;
+}
+
+#umlogo, #umlogo img, #msulogo, #msulogo img:focus{
+  border: none;
+}
+
+#umsi, #broad{
+  grid-column: 2/span 4;
+}
+
+#msulogo, #msulogo img{
+  grid-row: 3/span 1;
+}
+
+#umsi h2, #umsi h3{
+  background-color: #00274C;
+}
+
+#umsi h3{
+  border-bottom: 5px #00274C solid;
+  color: #FFCB05;
+}
+
+#umsi{
+  border: 5px solid #00274C;
+}
+
+#broad h2, #broad h3{
+  background-color: #133E35;
+}
+
+#broad h3{
+  border-bottom: 5px #133E35 solid;
+  color: #FFCB05;
+}
+
+#broad{
+  border: 5px solid #133E35;
+}
+
+/*Professional Page*/
+.professional div{
+  grid-column: 2/span 4;
+}
+
+.professional .container img{
+  display: none;
+}
+
+/*Certificate Page*/
+.certificate .container div{
+  grid-column: 2/span 4;
+  display: flex;
+  border: none;
+  width: 100%;
+  max-width: 500px;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.certificate .container div img{
+  width: 100%;
+  max-width: 500px;
+}
+
+.certificate .container div h2{
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  padding: 0px;
+}
+
+.certificate .container div p{
+  line-height: 1;
+  margin: 0px 0px 10px 0px;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px){
+  nav{
+    flex-direction: column;
+  }
+
+  #navigation{
+    display: flex;
+    flex-direction: row;
+  }
+
+  header{
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto 750px;
+    height: 600px;
+    background-image: url('../images/background.png');
+  }
+
+  h1{
+    color: #ffffff;
+    text-shadow: 4px 4px 8px #141414;
+    background-color: unset;
+  }
+  
+  /*About Page*/
+  .about .container p{
+    grid-column: 3/span 3;
+    margin-left: 20px;
+  }
+
+  #yuema{
+    width: 100%;
+    max-width: 200px;
+    grid-column: 2/span 1;
+    grid-row: 1/span 4;
+    margin: auto;
+  }
+  
+  /*Education Page*/
+  #umlogo, #umlogo img, #msulogo, #msulogo img{
+    width: 100%;
+    max-width: 150px;
+    grid-column: 2/span 1;
+    margin: 10px auto auto auto;
+  }
+  
+  #umsi, #broad{
+    grid-column: 3/span 3;
+  }
+  
+  #msulogo, #msulogo img{
+    grid-row: 2/span 1;
+  }
+
+  /*Professional Page*/
+  #it, #admissions{
+    grid-column: 3/span 3;
+  }
+
+  #transfar, #cusa{
+    grid-column: 2/span 3;
+  }
+
+  .professional .container img{
+    display: initial;
+    width: 50%;
+    max-width: 200px;
+    margin: auto;
+  }
+
+  #it_logo, #admissions_logo{
+    grid-column: 2/span 1;
+  }
+
+  #transfar_logo, #cusa_logo{
+    grid-column: 5/span 1;
+  }
+
+  /*Certificate Page*/
+  .certificate .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .certificate .container div img:hover{
+    width: 700px;
+    max-width: 700px;
+    opacity: 0.9;
+    border: 2px dotted #141414; 
+    margin-left: -100px;
+  }
+
+}
+
+@media screen and (min-width: 1025px){
+  nav{
+    padding: 30px 50px 30px 50px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .certificate .container{
+    display: flex;
+    flex-direction: unset;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+
+  .certificate .container div{
+    margin: 20px;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  #logo, .logo, nav{
+    animation: none;
+    -webkit-animation: none;
+  }
+
+  header{
+    background-attachment: initial;
+  }
+
+  .certificate .container div img:hover{
+    width: 500px;
+    max-width: 500px;
+    opacity: 1;
+    border: none; 
+    margin-left: 0px;
+  }
+}
