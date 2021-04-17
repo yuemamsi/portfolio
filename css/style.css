@@ -214,6 +214,10 @@ ul{
   margin: auto;
 }
 
+.about .container p{
+  margin-top: 20px;
+}
+
 /*Education Page*/
 #umlogo, #umlogo img, #msulogo, #msulogo img{
   width: 130px;
