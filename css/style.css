@@ -1,17 +1,17 @@
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .skip a{
   background-color: #ffffff;
-  left: 0;
-  padding: 7px;
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
-  z-index: 1;
+  border-radius: 5px;
+  padding: 10px;
   position: absolute;
   top: -50px;
   left: 10px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
 }
 
 .skip a:focus{
@@ -20,7 +20,7 @@ html{
   background-color: #ffffff;
 }
 
-*:focus{
+* a:focus{
   border: dashed 1px;
   padding: 5px;
   border-radius: 5px;
@@ -50,7 +50,7 @@ nav a, nav li{
   color: #ffffff;
   font-family: "Kanit", sans-serif;
   font-weight: initial;
-  padding: 10px;
+  padding: 10px 3px 10px 3px;
 }
 
 nav a:hover{
@@ -60,15 +60,17 @@ nav a:hover{
 }
 
 .about #navigation #about, .education #navigation #education,
-.professional #navigation #professional, .certificate #navigation #certificate{
+.professional #navigation #professional, .certificate #navigation #certificate,
+.contact #navigation #contact{
   font-style: italic;
   font-weight: bold;
   color: #ffaa39;
   text-shadow: 0px 0px 15px #ffc600;
+  text-transform: uppercase;
 }
 
 #logo, .logo{
-  width: 230px;
+  width: 220px;
   animation: logo_grow 2s 1;
   -webkit-animation: logo_grow 2s 1;
 }
@@ -78,7 +80,7 @@ nav a:hover{
     width: 25px;
   }
   to {
-    width: 230px;
+    width: 220px;
   }
 }
 
@@ -87,7 +89,7 @@ nav a:hover{
     width: 25px;
   }
   to {
-    width: 230px;
+    width: 220px;
   }
 } 
 
@@ -114,6 +116,11 @@ nav{
   }
 } 
 
+#navigation{
+  display: flex;
+  flex-direction: column;
+}
+
 body{
   background-color: #d1d4d3;  
 }
@@ -126,7 +133,7 @@ h1, h2, h3{
 
 h1{
   color: #141414;
-  font-size: 50px;
+  font-size: 32px;
   padding: 50px;
   text-align: center;
   background-color: #d1d4d3;
@@ -134,7 +141,7 @@ h1{
 
 h2{
   color: #ffffff;
-  font-size: 32px;
+  font-size: 20px;
   background-color: #141414;
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;
@@ -143,16 +150,16 @@ h2{
 
 h3{
   color: #ffaa39;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #141414;
   padding: 0px 15px 0px 15px;
   font-style: italic;
   border-bottom: 5px #141414 solid;
 }
 
-p,li{
+p,li,a{
   color: #141414;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
   padding: 7.5px 15px 7.5px 15px;
@@ -198,7 +205,6 @@ ul{
 
 .container p{
   grid-column: 2/span 1;
-  margin-top: 15px;
 }
 
 /*About Page*/
@@ -213,7 +219,7 @@ ul{
   width: 130px;
   grid-column: 2/span 1;
   margin: auto;
-  margin-bottom: -20px;
+  margin-bottom: -25px;
   border-radius: 20px;
 }
 
@@ -298,10 +304,172 @@ ul{
   text-align: center;
 }
 
+/*Contact Page*/
+.contact h2, .contact h3{
+  text-align: center;
+}
+
+.contact .container div{
+  border: none;
+  border-radius: 0px;
+  margin: 0px;
+}
+
+#contactform, #socialmedia{
+  border: 5px solid #141414;
+  border-radius: 20px;
+  margin: 20px;
+  grid-column: 2/span 1;
+}
+
+/*Contact Page - form*/
+form {
+  margin: 20px 0px 20px 0px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 10px 1fr 10px;
+}
+
+legend{ 
+  font-size: 150%;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 5px 0px 15px 0px;
+}
+
+label{
+  width: 100%;
+  margin: 0px auto 0px auto;
+  display: inline-block;
+  grid-column: 2/span 1;
+}
+
+input{
+  width: 100%;
+  box-sizing: border-box;
+  margin: 5px 0px 15px 0px;
+  display: inline-block;
+  padding: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+textarea{
+  width: 100%;
+  height: 15vh;
+  margin: 5px 0px 15px 0px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+button{
+  background-color: #ffaa39;
+  color: #141414;
+  width: 100px;
+  display: inline-block;
+  grid-column: 2/span 1;
+  margin: 0px auto 0px auto;
+  padding: 5px;
+}
+
+button:hover{
+  opacity: 0.8;
+}
+
+/*Contact Page - flip cards*/
+.contact .container a:hover, .contact .container a:focus{
+  border: none;
+}
+
+.cards:focus .card p{
+  border: dashed 1px #141414;
+  border-radius: 5px;
+}
+
+#cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.cards{
+  width: 250px;
+  height: 40px;
+  padding: 5px;
+  margin-bottom: 10px;
+  perspective: 1000px;
+}
+
+.card{
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.cards:hover .card, .cards:focus .card{
+  transform: rotateY(180deg);
+}
+
+.cards:focus .card{
+  border: none;
+}
+
+.card-front, .card-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-front p{
+  background-color: #ffaa39;
+  border: #141414 solid 1px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card-back{
+  transform: rotateY(180deg);
+}
+
+.card-back p{
+  color: #141414;
+  border: #141414 solid 1px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  text-align: center;
+}
+
 @media screen and (min-width: 600px){
+  h1{
+    font-size: 50px;
+  }
+
+  h2{
+    font-size: 32px;
+  }
+
+  h3{
+    font-size: 20px;
+  }
+
+  li,p,a{
+  font-size: 18px;
+  }
+
   #navigation{
-    display: flex;
+    width: 100%;
     flex-direction: row;
+    justify-content: space-around;
   }
 
   header{
@@ -309,7 +477,7 @@ ul{
     background-position: top center;
     background-repeat: no-repeat;
     background-size: auto 750px;
-    height: 600px;
+    height: 550px;
     background-image: url('../images/background.png');
   }
 
@@ -322,6 +490,7 @@ ul{
   .container{
   grid-template-columns: 1fr 4fr 1fr 8fr 1fr 4fr 1fr;
   }
+
   /*About Page*/
   .about .container p{
     grid-column: 4/span 3;
@@ -353,6 +522,120 @@ ul{
   }
 
   /*Professional Page*/
+  .professional div{
+    grid-column: 2/span 5;
+  }
+
+  #it ul{
+    background-attachment: initial;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150px auto;
+    background-image: url('../images/itluggage_opacity.png');
+  }
+
+  #transfar ul{
+    background-attachment: initial;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150px auto;
+    background-image: url('../images/transfar_opacity.png');
+  }
+
+  #admissions ul{
+    background-attachment: initial;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150px auto;
+    background-image: url('../images/admissions_opacity.png');
+  }
+
+  #cusa ul{
+    background-attachment: initial;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150px auto;
+    background-image: url('../images/cusa_opacity.png');
+  }
+
+  .professional div ul li{
+    background: #d1d4d370;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  /*Certificate Page*/
+  .certificate .container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+
+  .certificate .container div img:hover{
+    width: 700px;
+    max-width: 700px;
+    border: 2px dotted #ffaa39; 
+    margin-left: -100px;
+    -webkit-filter: opacity(85%); 
+    filter: opacity(85%);
+  }
+  
+  /*Contact Page*/
+  .form{
+    grid-template-columns: 15px 1fr 10px 1fr 15px;
+  }
+
+  label[for=first],label[for=email]{
+    grid-column: 2/span 1;
+  }
+
+  label[for=last],label[for=phone]{
+    grid-column: 4/span 1;
+  }
+
+  label[for=message]{
+    grid-column: 2/span 3;
+  }
+
+  button{
+    grid-column: 2/span 3;
+  }
+
+  #contactform, #socialmedia{
+    grid-column: 2/span 5;
+  }
+}
+
+@media screen and (min-width: 1000px){
+  /*navigation bar*/
+  nav{
+    padding: 30px 40px 30px 40px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav a, nav li{
+    padding: 10px;
+  }
+
+  #navigation{
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  /*parallax image*/
+  header{
+    height: 600px;  
+  }
+
+  /*Professional Page*/
+  #it ul, #transfar ul, #admissions ul, #cusa ul{
+  background-image: none;
+  }
+
   #it, #admissions{
     grid-column: 4/span 3;
   }
@@ -377,38 +660,57 @@ ul{
   }
 
   /*Certificate Page*/
-  .certificate .container{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-around;
-    margin-left: 75px;
-    margin-right: 75px;
-  }
-
-  .certificate .container div img:hover{
-    width: 700px;
-    max-width: 700px;
-    border: 2px dotted #ffaa39; 
-    margin-left: -100px;
-    -webkit-filter: opacity(85%); 
-    filter: opacity(85%);
-  }
-}
-
-@media screen and (min-width: 1000px){
-  nav{
-    padding: 30px 50px 30px 50px;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   .certificate .container div{
     margin: 20px;
+  }
+
+  /*Contact Page - Form*/
+  .form{
+    grid-template-columns: 20px 1fr 10px 1fr 10px 1fr 10px 1fr 20px;
+  }
+
+  label[for=first]{
+    grid-column: 2/span 1;
+  }
+
+  label[for=last]{
+    grid-column: 4/span 1;
+  }
+
+  label[for=email]{
+    grid-column: 6/span 1;
+  }
+
+  label[for=phone]{
+    grid-column: 8/span 1;
+  }
+
+  label[for=message]{
+    grid-column: 2/span 7;
+  }
+
+  button{
+    grid-column: 2/span 7;
+  }
+
+  /*Contact Page - flip cards*/
+  #cards{
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 
 @media screen and (prefers-reduced-motion: reduce){
+  .skip a{
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .card{
+    -webkit-transition: none;
+    transition: none;
+  }
+
   #logo, .logo, nav{
     animation: none;
     -webkit-animation: none;
