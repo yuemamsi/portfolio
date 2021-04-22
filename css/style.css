@@ -404,9 +404,10 @@ button:hover{
 }
 
 .cards{
-  width: 250px;
+  width: 30%;
+  min-width: 170px;
   height: 40px;
-  padding: 5px;
+
   margin-bottom: 10px;
   perspective: 1000px;
 }
